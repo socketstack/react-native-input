@@ -1,0 +1,56 @@
+/**
+ * Created by chenchunyong on 12/7/15.
+ */
+import React,{StyleSheet,View,TextInput,Text } from 'react-native';
+var s = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        borderWidth: 1,
+        alignItems: 'center',
+        borderRadius: 9,
+        backgroundColor: '#fff'
+    },
+    input: {
+        height: 43,
+        marginLeft: 10,
+        flex: 1
+    }
+
+});
+
+export  default React.createClass({
+    getInitialState() {
+        return {borderColor: '#ccc'}
+    },
+    render() {
+        return (
+            <View style={[s.container,this.state,this.props.style]}>
+                <TextInput style={[s.input|this.props.inputStyle]}
+                           onChangeText={this.props.onChange}
+                           placeholder={this.props.placeholder}
+                           onFocus={()=>{this._onFocus()}}
+                           onBlur={() => {this._onBlur()}}
+                           borderColor={this.props.borderColor}
+                           focusBorderColor={this.props.focusColor}
+                />
+                {this.props.onGetContainerIcon}
+            </View>
+        )
+    },
+    _onFocus(){
+        let focusBorderColor = this.props.focusBorderColor ? this.props.focusBorderColor : '#0095d9';
+        this.setState({borderColor: focusBorderColor});
+        if (this.props.onFocus) {
+            this.props.onFocus();
+        }
+    },
+    _onBlur(){
+        //失去焦点的时候,改变borderColor 颜色
+        let borderColor = this.props.borderColor ? this.props.borderColor : '#0095d9';
+        this.setState({borderColor: borderColor});
+        if (this.props.onBlur) {
+            this.props.onBlur();
+        }
+    }
+
+});

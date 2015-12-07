@@ -1,0 +1,23 @@
+{
+  "name": "react-native-input",
+  "version": "1.0.0",
+  "description": "采用React Native 开发的Input组件",
+  "main": "React Native",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenchunyong/react-native-input.git"
+  },
+  "keywords": [
+    "React",
+    "Natvie"
+  ],
+  "author": "chenchunyong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenchunyong/react-native-input/issues"
+  },
+  "homepage": "https://github.com/chenchunyong/react-native-input#readme"
+}
