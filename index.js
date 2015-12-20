@@ -28,6 +28,7 @@ export  default React.createClass({
                 <TextInput style={[s.input|this.props.inputStyle]}
                            onChangeText={this.props.onChange}
                            placeholder={this.props.placeholder}
+                           secureTextEntry={this.props.secureTextEntry}
                            onFocus={()=>{this._onFocus()}}
                            onBlur={() => {this._onBlur()}}
                            borderColor={this.props.borderColor}
