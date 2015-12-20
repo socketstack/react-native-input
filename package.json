@@ -1,6 +1,6 @@
 {
   "name": "react-native-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "采用React Native 开发的Input组件",
   "main": "React Native",
   "scripts": {
